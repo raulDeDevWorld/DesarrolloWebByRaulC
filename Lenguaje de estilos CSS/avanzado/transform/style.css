@@ -1,0 +1,87 @@
+/***********transform*************/
+/*NOTA:
+no utilizar posicionamiento elementos con transform
+porque gastan mas recursos*/
+:root{
+	--box-sizing:200px;
+	--box-margin:30px;
+	--font-size: 30px;
+}
+.container-flex{
+	display: flex;
+	flex-wrap:wrap;
+	text-align: center;
+	font-size: var(--font-size);
+}
+.rotate:hover{
+	transform: rotate(20deg);
+			/* rotateX(20deg)*/
+	transform-origin: top left;
+					/* 20% 50% */
+}
+.rotate{
+	width: var(--box-sizing);
+	height: var(--box-sizing);
+	background-color: lime;
+	margin: var(--box-margin);
+	line-height:var(--box-sizing); 
+}
+.rotate:hover{
+	transform: rotate(20deg);
+			/* rotateX(20deg)*/
+	transform-origin: top left;
+					/* 20% 50% */
+}
+.translate{
+	width: var(--box-sizing);
+	height: var(--box-sizing);
+	background-color: lightblue;
+	margin: var(--box-margin);
+	line-height:var(--box-sizing);
+}
+.translate:hover{
+	transform: translate(50px);
+			/* translateY(100px)
+			   translate(50px 100px)
+			   shorthand
+			   transform: translate(50px, 50px);*/
+}
+
+/*skew sta quedando en desuso por causa de clip-path*/
+.skew{
+	width: var(--box-sizing);
+	height: var(--box-sizing);
+	background-color: pink;
+	margin: var(--box-margin);
+	line-height:var(--box-sizing);
+}
+.skew:hover{
+	transform: skew(-20deg);
+}
+.scale{
+	width: var(--box-sizing);
+	height: var(--box-sizing);
+	background-color: yellow;
+	margin: var(--box-margin);
+	line-height:var(--box-sizing);
+}
+.scale:hover{
+	transform: scale(1.2);
+			/* scaleX(1)
+			   scaleY(50px 100px)
+			   shorthand
+			   transform: scale(1, 0);*/
+}
+
+
+
+.combination{
+	width: var(--box-sizing);
+	height: var(--box-sizing);
+	background-color: peru;
+	margin: var(--box-margin);
+	line-height:var(--box-sizing);
+}
+.combination:hover{
+	transform: scale(1.2) rotate(20deg);
+}

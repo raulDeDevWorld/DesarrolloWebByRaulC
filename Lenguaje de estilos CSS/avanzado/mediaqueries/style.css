@@ -1,0 +1,52 @@
+/********************mediaqueries o breackpoints********************/
+/*Breakpoints: Existen dos tipos de breakpoints, los major breakpoints y los minor breakpoints
+Los major breakpoints son los que cambian la apariencia de la web de forma significativa
+Los minor breakpoints son los que cambian una cosa específica para un elemento en concreto*/
+
+
+/*first mobile:
+Es un enfoque de desarrollo y diseño web enfocado en la priorización del diseño y el desarrollo 
+para dispositivos móviles por encima del diseño y desarrollo para pantallas de escritorio.
+
+/*-------------------sintaxis------------------*/
+/*@media ""tipo de medio" and|or (condicion)
+
+@media screen and (min-width: 360px)
+@media screen and (max-width: 1024px) and (orientation:landscape) |ancho mas grande que el alto
+@media screen and (max-width: 480px) or (orientation:portrait)  |alto mas grande que el ancho
+
+Medidas más comunes:
+ 
+0 - 320px - 360px: Móviles portrait
+480px - 640px - 768px: Móviles landscape - tablet
+1024px - 1200px - 1400px - 1440px: tablets grandes, portátiles no HD
+1920 - hacia arriba: HD, 2k, 4k...
+*/
+
+body{
+	margin: 0;
+
+	height: 100vh;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.box {
+	background-color: lightblue;
+	height: 100px;
+	width: 100px;
+}
+
+/*apartir de min-width se aplicaran las siguientes propiedades*/
+@media (min-width: 768px){
+	.box {
+		background-color: lime;
+		height: 200px;
+		width: 200px
+	}
+}
+
+
+

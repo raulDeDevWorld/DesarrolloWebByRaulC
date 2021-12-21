@@ -1,0 +1,17 @@
+/***************overflow*****************/
+/*overflow:scroll/ hidden/ auto*/
+
+body{
+
+	/*oculta el overflow*/
+overflow: hidden;
+}
+.section {
+	width: 50vw;
+	height: 80vh;
+	background: lightgreen;
+
+	/*automatiza el overflow*/
+	overflow: auto;
+	padding:10vh;
+}

@@ -1,0 +1,431 @@
+body{
+	background-color: whitesmoke;
+	height: 100vh;
+	font-family: sans-serif;
+	/*display:flex;
+	justify-content: center;para alinear en el main axis
+	align-items: center;para alinear un bloke en el cross axis*/
+}
+
+
+
+
+
+
+/**************************GRID*******************************/
+/*es un modelo de layout que permite construir grillas o 
+cuadriculas dinamicas*/
+/*conceptos:
+grid colum: es cada columna de nuestra cuadricula;
+grid row: es cada fila de nuestra cuadricula;
+grid cell: escada celda de nuestra cuadricula;
+grid gap: es la separacion entre celdas;
+grid line: son lineas que delimitan cada columna o fila;
+*/
+
+
+/*------------------grid-template-columns----------------------*/
+.grid-container{
+	display: grid;
+
+	/*creacion de columnas con anchos(width) especifico*/
+	/*los grid-items solo ocuparan las columnas especificadas
+	las demas saltaran se ubicaran debajo de las primeras */
+	grid-template-columns: 100px 100px 100px 100px;
+
+	/*separacion entre columnas*/
+	grid-column-gap: 10px;
+	/*separacion entre filas*/
+	grid-row-gap: 10px;
+}
+.grid-item{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	border:1px solid black;
+	padding:10px 15px;
+
+	font-size:30px;
+}
+
+	/*centreado sin flexbox
+	text-align:center;
+	line-height: 50px;
+	*/
+
+
+
+/*--------------------grid-template-rows------------------------*/
+.grid-container2{
+	display: grid;
+
+	/*creacion de columnas con anchos(width) especificos*/
+	grid-template-columns: 100px 100px 100px 100px;
+
+	/*creacion de filas con altos(height) especificos*/
+	/*los grid-items tomaran dichas especificaciones 
+	hasta la fila donde se les haya especificado
+	sin embargo los restantes ocuparan altos por defecto 
+	(implicit grit)*/
+	grid-template-rows: 100px 100px	100px 100px;
+	
+}
+
+
+/*------------------perzonalizacion de grid-items--------------------*/
+
+.grid-item2{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	border: 1px solid black;
+	padding: 10px 15px;
+
+	font-size: 30px;
+}
+.grid-item2:nth-child(4){
+	background-color: yellow;
+	/*grid line de inicio/grid line de finalizacion de grid-items*/
+	grid-column: 1/2;
+	/*grid line de inicio/grid line de finalizacion de grid-items*/
+	grid-row: 1/2;
+}
+.grid-item2:nth-child(3){
+	background-color: yellow;
+	grid-column: 3/4;
+	grid-row: 1/3;
+}
+.grid-item2:nth-child(2){
+	background-color: pink;
+	grid-column: 1/3;
+	grid-row: 2/4;
+}
+.grid-item2:nth-child(9){
+	/*ocupara las primeras filas especificadas
+	in this case three*/
+	grid-column-start: span 3;
+}
+
+
+
+
+/****************repeat********************/
+.grid-container3{
+	display: grid;
+
+
+	/*repeat(numero de col, medida)*/
+
+	/*patrones
+	reapeat(numero de columnas, medida medida)
+
+	ej:  grid-template-columns: repeat(3, 100px 50px 25px);
+	es decir habran 3 bucles con tamaños especificados 
+	los cuales se daran en el orden especificado*/
+
+
+	/*combinaciones
+	100px repeat(5,100px) 100px
+	100px repeat(2, 100px 50px) 1fr auto*/
+
+	grid-template-columns: repeat(2, 100px 50px) 1fr auto;
+	/*------------unidades de medidad propias de grid--------------
+	fr utliza el espacio disponible/sombrante
+	auto utiliza el espacio necesario para el contenido y/o padding
+	*/
+
+}
+.grid-item3{
+	font-size: 30px;
+
+	border:1px solid black;
+	padding: 10px 15px;
+}
+
+/*---------------------ejemplo 2----------------------*/
+
+.grid-container4{
+	padding: 10px;
+
+	display: grid;
+	grid-template-columns:repeat(4, 100px);
+	grid-template-rows: repeat(3, 100px);
+	grid-auto-rows: 100px;
+
+}
+.grid-item4{
+	font-size: 30px;
+
+	border:1px solid black;
+	padding: 10px 15px;
+}
+
+
+/*******************dense*******************/
+
+
+.grid-container5{
+	padding: 10px;
+
+	display: grid;
+	grid-template-columns: repeat(2, 100px);
+	grid-template-rows: repeat(2, 200px);
+
+	/*automatiza el relleno de espacios disponibles
+	grid-auto-flow: row;*/
+	grid-auto-flow: column;
+	/*grid-auto-flow: row dense;
+	grid-auto-flow:dense;*/
+
+}
+.grid-item5{
+	border:1px solid black;
+	font-size: 30px;
+	padding: 10px 15px;
+}
+
+.grid-item5:nth-child(5){
+	grid-column: 3/5;
+
+}
+
+.grid-item5:nth-child(6){
+	grid-column: 2/5;
+
+}
+
+
+
+
+/*********************minmax**********************/
+
+.grid-container6{
+	margin:20px;
+	display:grid;
+	grid-gap:3px;
+	/*minmax estable el minimo y el maximo de redimencion de grid-items*/
+	/*ej:   grid-template-columns:repeat(3, minmax(20px, 100px))*/
+	grid-template-columns: repeat(3, minmax(min-content, 1fr));
+	/*min-content permite que los grid-items se encojan en funcion al contenido,
+	por lo cual puede desbordar un parrafo dentro del grd-item para acomodarlo
+	pero nunca para sacalo fuera de el,
+	max-content permite que los grid-items se encojan pero a diferncia del 
+	min-content nunca desbordara un parrafo para acomodarlo dentro de su grid-items */
+}
+
+.grid-item6{
+	color: black;
+	border:1px solid black;
+	font-size: 2rem;
+	padding:1rem 2rem;	
+}
+
+
+
+
+
+
+/********************auto-fill/auto-fit*************************/
+.grid-container7{
+	margin: 3rem;
+	display: grid;
+
+	/*auto fill no permite que los grid-itmes crescan mas alla 
+	de su maximo dado con minmax pero tampoco permite que decrescan 
+	de dicho valor, por lo cual si tiene que acomodar los grid-itmes
+	uno debajo de otro lo hace*/
+
+	/*auto-fit permite que los grid-items ocupen todo los valores dados
+	en el mixmax y se acomoden debajo de sus hermanos cuando sus tamaño 
+	acanzan el minimo segun minmax*/	
+	grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+
+.grid-item7{
+	color:black;
+	border: 1px solid black;
+	font-size: 30px;
+	padding:2rem 1rem ;
+}
+
+
+
+
+
+
+
+
+/********alineacion en grid respecto a la celda o casillero********/
+.grid-container8{
+	display: grid;
+	border: 1px solid black;
+	margin:30px;
+	grid-gap: 10px;
+ 	height: 80vh; 
+	grid-template-columns: repeat(3, 1fr);
+
+	/*permite alinear los grid items respecto a la celda horizontalmente(lineal)*/
+	/*justify-items:start;strech, end, center, start*/
+
+	/*permite alinear los grid items respecto a la celda verticalmente*/
+	/*align-items: start;strech, end, center, start*/
+
+	/*shorthand
+	place-items:vertical horizontal;*/
+	place-items:center end;
+	
+}
+.grid-item8{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1rem;
+	border:1px solid black;
+	color:black;
+	padding: 1rem;
+}
+
+
+
+
+
+
+
+
+/******alineacion en grid respecto a la celda o contenedor*******/
+
+.grid-container9{
+	display: grid;
+	border: 1px solid black;
+	margin:30px;
+	grid-gap: 10px;
+ 	height: 80vh; 
+	grid-template-columns: repeat(3, 100px);
+	
+	/*permite alinear los grid items respecto a su contenedor horizontalmente(lineal)*/	
+	/*justify-content:space-evenly ;strech, end, center, start,space-between, space-around*/
+
+	/*permite alinear los grid items respecto a su contenedor verticalmente*/
+	/*align-items:space-around;strech, end, center, start, space-between, space-around, space-evenly(en columna)*/
+
+	/*shorthand
+	place-content:vertical horizontal;*/
+	place-content:center end;
+}
+.grid-item9{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1rem;
+	border:1px solid black;
+	color:black;
+	padding: 1rem;
+}
+
+.grid-item9:first-child{
+
+	/*permite alinear un grid items en especifico respecto a su celda
+	de manera horizontal(lineal)*/
+	/*justify-self:center; stretch start center end*/ 
+
+	/*permite alinear un grid items en especifico respecto a su celda
+	de manera vertical*/
+	/*align-self: start; stretch start center end*/ 
+
+	/*shorthand
+	place-self: vertical horizontal;*/
+	place-self: start end;
+
+	/*permite perzonalizar el orden de las celdas*/
+	/*las celdas se ordenan en funcion de los numeros asignados
+	siendo el numero menor el primero y el numero mayor el ultimo*/
+	order:5;
+}
+
+.grid-item9:nth-child(7){
+	/*justify-self:center;
+	align-self: start;*/
+	place-self: start end;
+	order:5;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*******************grid-template-areas*******************/
+/*es una forma de distribuir el layout atraves de nombres*/
+
+.main{
+	display: grid;
+	grid-template-columns:repeat(3, 1fr);
+
+	/*establecemos las filas y las columnas*/
+	grid-template-areas:
+		"header header header"
+		"section section aside"
+		"footer footer footer";
+		/*footer footer . ;      
+		sintacticamente podemos es correcto utilizar un punto
+		para dejar una celda vacia*/
+}
+
+/*atraves de las clases pre-determinadas en el html establecemos
+las areas que les corresponden*/
+.header{
+	padding: 2rem;
+	font-size: 2rem;
+	grid-area:header;
+	background: orange;
+}
+.section{
+	padding: 2rem;
+	font-size: 2rem;
+	grid-area: section;
+	background: yellow;
+
+}
+.aside{
+	padding: 2rem;
+	font-size: 2rem;
+	grid-area:aside;
+	background: green;
+}
+.footer{
+	padding: 2rem;
+	font-size: 2rem;
+	grid-area: footer;
+	background: brown;
+}
+
+
+
+
+
+
+/*NOTA IMPOTANTE: 
+shorthand de grid-template-columns y grid-template-rows
+
+.grid-container{
+	grid-template:100px 100px/200px 200px;
+					FILAS 		COLUMNAS
+}
+
+
+grid track: es la seleccion de grid-items
+que estan una a lado de la otra
+.grid-item:first-child,
+.grid-item:nth-child(2),
+.grid-item:nth-child(3){
+	background:lime;
+}
+
+*/

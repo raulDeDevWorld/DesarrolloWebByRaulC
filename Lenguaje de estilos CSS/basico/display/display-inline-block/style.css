@@ -1,0 +1,12 @@
+/*
+------------------display inline-block-------------------
+dota a los elementos de todas las propiedades inline y block
+*/
+
+
+.inline-block{
+	background-color: lime;
+	height: 100px;
+	width: 100px;
+	display:inline-block;
+}

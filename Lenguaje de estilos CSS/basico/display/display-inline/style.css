@@ -1,0 +1,27 @@
+/*
+---------------------display inline----------------------
+convierte un elemento en bloque a elemento en linea
+*/
+
+.div1{
+	background: lime;
+	height: 100px;
+	margin:10px;
+}
+.div2{
+	background: lime;
+	height: 100px;
+	margin:10px;
+}
+.div3{
+	background: lime;
+	display: inline;
+	height: 100px;
+	margin:10px;
+}
+.div4{
+	background: lime;
+	display: inline;
+	height: 100px;
+	margin:10px;
+}

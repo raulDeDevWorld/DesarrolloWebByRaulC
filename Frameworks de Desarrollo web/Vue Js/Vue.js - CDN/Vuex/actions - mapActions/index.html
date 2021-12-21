@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://unpkg.com/vuex@3.4.0/dist/vuex.js"></script>
+</head>
+<body>
+
+  <div id="app">
+    <titulo>
+    </titulo>
+
+  </div>
+
+
+  <script>
+    Vue.component('titulo',{
+      template:` 
+      <div>
+      <!--metodo para llamar a Vuex.store-->
+        <h1>Numero {{numero}}</h1>
+        <hijo></hijo>
+      </div>
+      `,
+//... los tres puntos ubican el contenido de nuestro objeto state dentro del objeto de computed
+//mapState mapea todo el nuestro objeto state, por lo cual podemos llamar a su contenido mediante su nombre
+      computed: {
+        ...Vuex.mapState(['numero'])
+      }
+
+    })
+
+
+    Vue.component('hijo',{
+      template:` 
+      <div>
+      <!--commit ejecuta las mutaciones-->
+        <button v-on:click="aumentar">+</button>
+        <!--parametros-->
+        <button v-on:click="disminuir(2)">-</button>
+        <button @click="obtenerCursos">ObtenerCursos</button>
+        <h1>Numero {{numero}}</h1>
+
+        <ul v-for="item of cursos">
+        <li>{{item.nombre}}</li>
+        </ul>
+      </div>
+      `,
+//
+      
+      computed: {
+        ...Vuex.mapState(['numero', 'cursos'])
+      },
+
+      methods: {
+        ...Vuex.mapMutations(['aumentar', 'disminuir']),
+        ...Vuex.mapActions(['obtenerCursos'])
+      }
+    })
+
+
+//dato global gracias a Vuex
+//creamos una instacia de Vuex.store
+const store = new Vuex.Store({
+  state: {
+//dato
+    numero:0,
+////array vacio que llenaremos con una action
+    cursos:[]
+  },
+//manipular datos
+  mutations: {
+    aumentar(state){
+      state.numero++
+//this.state.numero++
+    },
+//parametros
+    disminuir(state, n){
+      state.numero-=n 
+    },
+//pasamos a cursosAccion como parametro
+    llenarCursos(state, cursosAccion){
+//state.cursos viene de state
+//lo llenaremos con cursosAccion
+//cursosAccion viene de action
+      state.cursos = cursosAccion
+    }
+
+  },
+////actions hace procesamientos atraves del backend por ejemplo una consulta a api's 
+  actions: {
+//pasamos a comit como parametro
+    obtenerCursos: async function({ commit }){
+      const data = await fetch('cursos.json');
+      const cursos = await data.json();
+//el commit llama a una mutation la cual es pasada como parametro seguido de nuestro data.json
+      commit('llenarCursos', cursos)
+    }
+
+  }
+})
+    new Vue({
+      el:'#app',
+      store: store
+    })
+  </script>
+</body>
+</html>

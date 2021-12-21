@@ -1,0 +1,80 @@
+/*******************animaciones********************/
+body{
+	margin: 0;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	height: 100vh;
+}
+
+.box{
+	height: 30vh;
+	width: 20vw;
+
+	background-color: lime;
+
+	/*animation-name: 
+	nombre de la animación, es obligatoria*/
+	animation-name: myAnimation;
+
+	/*animation-duration: 
+	duración de la animación, es obligatoria*/
+	animation-duration: 3s;
+
+	/*animation--count: 
+	establece el número de veces que queremos repetir la animación*/
+	animation-iteration-count: infinite;
+
+	/*animation-play-state:
+	Establece si una animación está en ejecución o en pausa.
+	Acepta los valores: running | paused*/
+	/*animation-play-state: paused;*/
+
+	/*animation-delay: 
+	Establece el tiempo de retardo que debe transcurrir antes de comenzar la animación.*/
+	animation-delay: 3s;
+
+	/*animation-direction: 
+	Establece el curso en el que se va a reproducir la animación.*/
+    /*Acepta los valores:  normal | reverse | alternate*/
+	/*animation-direction: reverse;*/
+
+    /*animation-timing-function: 
+    Establece la forma en la que se moverá la animación 
+    en cada una de las interpolaciones.*/
+    /*Acepta los valores: ease | linear | ease-in | ease-out 
+    | ease-in-out | steps(n,[direction]) | cubic-bezier()
+    /*animation-timing-function: ease-in*/
+
+
+
+	/*animation-fill-mode: 
+	Establece el modo en que una animación CSS aplica sus estilos. Acepta los valores:
+    
+    none: 
+    La animación no aplicará los estilos ni antes ni después de su ejecución.
+    
+    forwards: (mantiene el ultimo keyframe de la ejecucion)
+    El objeto sobre el que se aplica la animación quedará con los valores y 
+    estilos que le aplique el último keyframe de la ejecución de la animación.
+
+    backwards: (mantiene el primer keyframe desde un principo)
+    La animación aplicará los valores definidos en el primer keyframe tan pronto como 
+    se aplique al objeto, y los retendrá durante el tiempo de animation-delay. 
+    El primer keyframe dependerá del valor de animation-direction
+
+    both: (combina los dos anteriores)
+    Durante el período definido por animation-delay, la animación aplicará los valores 
+    de propiedad definidos en el fotograma clave que comenzará la primera iteración de 
+    la animación.*/
+
+    /*animation-fill-mode: forwards;*/ 
+}
+
+
+@keyframes myAnimation{
+	0% {transform: scale(1);}
+	50%{transform: scale(2);}
+}

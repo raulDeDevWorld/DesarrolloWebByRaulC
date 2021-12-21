@@ -1,0 +1,626 @@
+/********************flexbox********************/
+/*es un modelo de layout*//**/
+/*se aplica a un contenedor*/
+/*los hijos del contenedor se hacen flexibles*/
+
+
+
+p{
+	font-size: 20px;
+	margin: 20px;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+/*---------------flex-wrap: wrap;-----------------*/
+
+.flex-container{
+	background-color: hsla(0, 100%, 50%, .3);/*(color,saturacion100%
+	 "color puro",luminosidad50%"color puro",
+	 transparencia y opacidad)*/
+
+	padding: 20px;
+	margin:50px;
+
+	display: flex;
+	/*controla el salto de elementos*/
+	/*no-wrap por defecto, wrap, wrap-reverse*/
+	flex-wrap: wrap;
+}
+
+.flex-item1, .flex-item2, .flex-item3, .flex-item4, .flex-item5{
+	width: 100px; 
+	height:100px;
+
+	margin: 5px; 
+
+	color:hsla(0, 100%, 100%, 1);
+	text-align: center;
+	line-height:100px;
+}
+
+.flex-item1{
+	background-color: green;
+}
+
+.flex-item2{
+	background-color: blue;
+}
+
+.flex-item3{
+	background-color: red;
+}
+
+.flex-item4{
+	background-color: black;
+}
+
+.flex-item5{
+	background-color: purple;
+}
+
+
+
+
+
+
+/*---------------flex-direction: row-reverse;---------------*/
+.flex-container2{
+	background-color: hsla(0, 100%, 50%, .3);/*(color,saturacion100%
+	 "color puro",luminosidad50%"color puro",
+	 transparencia y opacidad)*/
+
+	padding: 20px;
+	margin:50px;
+
+	display: flex;
+	/*controla el salto de elementos*/
+	/*no-wrap por defecto, wrap, wrap-reverse*/
+	flex-wrap: wrap;
+
+	/*controla la direccion*/
+	/*row por defecto,row reverse, column, column-reverse*/
+	flex-direction: row-reverse;
+
+}
+
+.flex2-item1, .flex2-item2, .flex2-item3, .flex2-item4, .flex2-item5{
+	width: 100px; 
+	height:100px;
+
+	margin: 5px; 
+
+	color:hsla(0, 100%, 100%, 1);
+	text-align: center;
+	line-height:100px;
+}
+
+.flex2-item1{
+	background-color: green;
+}
+
+.flex2-item2{
+	background-color: blue;
+}
+
+.flex2-item3{
+	background-color: red;
+}
+
+.flex2-item4{
+	background-color: black;
+}
+
+.flex2-item5{
+	background-color: purple;
+}
+
+
+
+
+
+
+
+
+
+/*
+-------------shorthand (flex-direction wrap)---------------
+	flex-flow: flex-direction wrap
+*/
+
+
+
+
+
+
+
+
+/*************alineacion en el main axis***************/
+/*-----------justify-content: space-evenly;-----------*/
+
+
+.flex-container3{
+	background-color: hsla(0, 100%, 50%, .3);/*(color,saturacion100%
+	 "color puro",luminosidad50%"color puro",
+	 transparencia y opacidad)*/
+
+	width: 80vw;
+	height: 100vh;
+
+	padding: 20px;
+	margin: 10vh 8vw;
+	
+	display: flex;
+	/*controla el salto de elementos*/
+	/*no-wrap por defecto, wrap, wrap-reverse*/
+	flex-wrap: wrap;
+
+	/*flex-start por defecto,(posicion de izquierda a derecha)
+	 center, (posicion centreado)
+	 space-between,(posicion con espacio igualitario entre elementos, solo entre elementos)
+	 flex-end,(posicion al final)
+	 space-around, (posicion con espacio igualitario entre elemento mas un espacio al principio y el fin)
+	 space-evenly, (posicion con espacio igualitario a todos lados)*/
+	justify-content: center;
+}
+
+.flex3-item1, .flex3-item2, .flex3-item3, .flex3-item4, .flex3-item5{
+	width: 100px; 
+	height:100px;
+
+	margin: 5px; 
+
+	color:hsla(0, 100%, 100%, 1);
+	text-align: center;
+	line-height:100px;
+}
+
+.flex3-item1{
+	background-color: green;
+}
+
+.flex3-item2{
+	background-color: blue;
+}
+
+.flex3-item3{
+	background-color: red;
+}
+
+.flex3-item4{
+	background-color: black;
+}
+
+.flex3-item5{
+	background-color: purple;
+}
+
+
+
+
+
+
+/*************alinacion en el cross axis**************/
+/*-------------------align items---------------------*/
+.flex-container4{
+	background-color: hsla(0, 100%, 50%, .3);/*(color,saturacion100%
+	 "color puro",luminosidad50%"color puro",
+	 transparencia y opacidad)*/
+
+	width: 80vw;
+	height: 100vh;
+
+	padding: 20px;
+	margin: 10vh 8vw;
+	
+	display: flex;
+	/*controla el salto de elementos*/
+	/*no-wrap por defecto, wrap, wrap-reverse*/
+	flex-wrap: wrap;
+
+	/*flex-start por defecto,(posicion de izquierda a derecha)
+	 center, (posicion centreado)
+	 space-between,(posicion con espacio igualitario entre elementos, solo entre elementos)
+	 flex-end,(posicion al final)
+	 space-around, (posicion con espacio igualitario entre elemento mas un espacio al principio y el fin)
+	 space-evenly, (posicion con espacio igualitario a todos lados)*/
+	justify-content: center;
+
+	/*la anieacion no es absoluta por lo cual:
+	aplicar solo en elemento o grupo de elementos que ocupen una sola linea*/
+	/* stretch por defecto, flex-end, center, flex-start(ajusta el background al contenido),*/
+	align-items:center; 
+}
+
+.flex4-item1, .flex4-item2, .flex4-item3, .flex4-item4, .flex4-item5{
+	width: 100px; 
+	height:100px;
+
+	margin: 5px; 
+
+	color:hsla(0, 100%, 100%, 1);
+	text-align: center;
+	line-height:100px;
+}
+
+.flex4-item1{
+	background-color: green;
+}
+
+.flex4-item2{
+	background-color: blue;
+}
+
+.flex4-item3{
+	background-color: red;
+}
+
+.flex4-item4{
+	background-color: black;
+}
+
+.flex4-item5{
+	background-color: purple;
+}
+
+
+
+
+
+
+
+
+/*---------------------align content----------------------*/
+
+
+.flex-container5{
+	background-color: hsla(0, 100%, 50%, .3);/*(color,saturacion100%
+	 "color puro",luminosidad50%"color puro",
+	 transparencia y opacidad)*/
+
+	width: 80vw;
+	height: 100vh;
+
+	padding: 20px;
+	margin: 10vh 8vw;
+	
+	display: flex;
+	/*controla el salto de elementos*/
+	/*no-wrap por defecto, wrap, wrap-reverse*/
+	flex-wrap: wrap;
+
+	/*flex-start por defecto,(posicion de izquierda a derecha)
+	 center, (posicion centreado)
+	 space-between,(posicion con espacio igualitario entre elementos, solo entre elementos)
+	 flex-end,(posicion al final)
+	 space-around, (posicion con espacio igualitario entre elemento mas un espacio al principio y el fin)
+	 space-evenly, (posicion con espacio igualitario a todos lados)*/
+	justify-content: center;
+
+	/*alineacion absoluta de todos los elementos*/
+	/* stretch por defecto, flex-end, center, flex-start(ajusta el background al contenido),*/
+	align-content:center; 
+}
+
+.flex5-item1, .flex5-item2, .flex5-item3, .flex5-item4, .flex5-item5{
+	width: 100px; 
+	height:100px;
+
+	margin: 5px; 
+
+	color:hsla(0, 100%, 100%, 1);
+	text-align: center;
+	line-height:100px;
+}
+
+.flex5-item1{
+	background-color: green;
+}
+
+.flex5-item2{
+	background-color: blue;
+}
+
+.flex5-item3{
+	background-color: red;
+}
+
+.flex5-item4{
+	background-color: black;
+}
+
+.flex5-item5{
+	background-color: purple;
+}
+
+
+
+
+/******************flex-grow******************/
+/*permite que los hijos de un contenedor con dicho atributo 
+tomen un espacio extra en funcion a las que se le divisiones asignan*/
+
+.flex-grow{
+	background-color: hsla(0, 100%, 50%, .3);/*(color,saturacion100%
+	 "color puro",luminosidad50%"color puro",
+	 transparencia y opacidad)*/
+
+	width: 80vw;
+	height: 100vh;
+
+	padding: 20px;
+	margin: 10vh 8vw;
+	
+	display: flex;
+	/*controla el salto de elementos*/
+	/*no-wrap por defecto, wrap, wrap-reverse*/
+	flex-wrap: wrap;
+
+	/*flex-start por defecto,(posicion de izquierda a derecha)
+	 center, (posicion centreado)
+	 space-between,(posicion con espacio igualitario entre elementos, solo entre elementos)
+	 flex-end,(posicion al final)
+	 space-around, (posicion con espacio igualitario entre elemento mas un espacio al principio y el fin)
+	 space-evenly, (posicion con espacio igualitario a todos lados)*/
+	justify-content: center;
+
+	/*alineacion absoluta de todos los elementos*/
+	/* stretch por defecto, flex-end, center, flex-start(ajusta el background al contenido),*/
+	align-content:center; 
+}
+
+.item-grow{
+	width: 100px; 
+	height:100px;
+
+	margin: 5px; 
+
+	color:hsla(0, 100%, 100%, 1);
+	text-align: center;
+	line-height:100px;
+}
+
+.item-grow1 {
+	background-color: green;
+	flex-grow: 2;
+}
+
+.item-grow2 {
+	background-color: blue;
+	flex-grow: 3;
+}
+
+.item-grow3 {
+	background-color: red;
+}
+
+.item-grow4 {
+	background-color: black;
+}
+
+
+
+
+
+
+
+
+
+/******************flex-shrink******************/
+/*hace que los hijos de un contenedor con la propiedad flex-grow:valor;
+ cedan espacios asignados
+*/
+
+.flex-shrink{
+	background-color: hsla(0, 100%, 50%, .3);/*(color,saturacion100%
+	 "color puro",luminosidad50%"color puro",
+	 transparencia y opacidad)*/
+
+	width: 80vw;
+	height: 100vh;
+
+	padding: 20px;
+	margin: 10vh 8vw;
+	
+	display: flex;
+	/*controla el salto de elementos*/
+	/*no-wrap por defecto, wrap, wrap-reverse*/
+	flex-wrap: ;
+
+	/*flex-start por defecto,(posicion de izquierda a derecha)
+	 center, (posicion centreado)
+	 space-between,(posicion con espacio igualitario entre elementos, solo entre elementos)
+	 flex-end,(posicion al final)
+	 space-around, (posicion con espacio igualitario entre elemento mas un espacio al principio y el fin)
+	 space-evenly, (posicion con espacio igualitario a todos lados)*/
+	justify-content: center;
+
+	/*alineacion absoluta de todos los elementos*/
+	/* stretch por defecto, flex-end, center, flex-start(ajusta el background al contenido),*/
+	align-content:center; 
+}
+
+.item-shrink{
+	width: 400px; 
+	height:100px;
+
+	margin: 5px; 
+
+	color:hsla(0, 100%, 100%, 1);
+	text-align: center;
+	line-height:100px;
+}
+
+.item-shrink1 {
+	background-color: green;
+	flex-shrink: 3;
+}
+
+.item-shrink2 {
+	background-color: blue;
+	flex-shrink: 2;
+}
+
+.item-shrink3 {
+	background-color: red;
+}
+
+.item-shrink4 {
+	background-color: black;
+}
+
+
+
+
+
+
+
+
+/******************flex-basis******************/
+/*define el tamaño de un contenedor hijo en su eje principal*/
+/*en un contenedor con tamaños relativos (padre e hijos)
+ el contenedor hijo que tenga la propiedad flex-basis:(ej: 100px)tendra 
+ una diferente manera de redimencionarse respecto a sus hermanos*/
+
+.flex-basis{
+	background-color: hsla(0, 100%, 50%, .3);/*(color,saturacion100%
+	 "color puro",luminosidad50%"color puro",
+	 transparencia y opacidad)*/
+
+	width: 80vw;
+	height: 100vh;
+
+	padding: 20px;
+	margin: 10vh 8vw;
+	
+	display: flex;
+	/*controla el salto de elementos*/
+	/*no-wrap por defecto, wrap, wrap-reverse*/
+	flex-wrap: ;
+
+	/*flex-start por defecto,(posicion de izquierda a derecha)
+	 center, (posicion centreado)
+	 space-between,(posicion con espacio igualitario entre elementos, solo entre elementos)
+	 flex-end,(posicion al final)
+	 space-around, (posicion con espacio igualitario entre elemento mas un espacio al principio y el fin)
+	 space-evenly, (posicion con espacio igualitario a todos lados)*/
+	justify-content: center;
+
+	/*alineacion absoluta de todos los elementos*/
+	/* stretch por defecto, flex-end, center, flex-start(ajusta el background al contenido),*/
+	align-content:center; 
+}
+
+.item-basis{
+	width: 30%; 
+	height:20%;
+
+	margin: 5px; 
+
+	color:hsla(0, 100%, 100%, 1);
+	text-align: center;
+	line-height:100px;
+}
+
+.item-basis1 {
+	background-color: green;
+	flex-basis: 200px;
+}
+
+.item-basis2 {
+	background-color: blue;
+}
+
+.item-basis3 {
+	background-color: red;
+}
+
+.item-basis4 {
+	background-color: black;
+}
+
+
+/*------------------shorthand---------------------
+flex:grow shrink basis
+*/
+
+
+
+
+
+
+
+
+/*********************order*********************/
+/*define el tamaño de un contenedor hijo en su eje principal*/
+/*en un contenedor con tamaños relativos (padre e hijos)
+ el contenedor hijo que tenga la propiedad flex-order:(ej: 100px)tendra 
+ una diferente manera de redimencionarse respecto a sus hermanos*/
+
+.flex-order{
+	background-color: hsla(0, 100%, 50%, .3);/*(color,saturacion100%
+	 "color puro",luminosidad50%"color puro",
+	 transparencia y opacidad)*/
+
+	width: 80vw;
+	height: 100vh;
+
+	padding: 20px;
+	margin: 10vh 8vw;
+	
+	display: flex;
+	/*controla el salto de elementos*/
+	/*no-wrap por defecto, wrap, wrap-reverse*/
+	flex-wrap: ;
+
+	/*flex-start por defecto,(posicion de izquierda a derecha)
+	 center, (posicion centreado)
+	 space-between,(posicion con espacio igualitario entre elementos, solo entre elementos)
+	 flex-end,(posicion al final)
+	 space-around, (posicion con espacio igualitario entre elemento mas un espacio al principio y el fin)
+	 space-evenly, (posicion con espacio igualitario a todos lados)*/
+	justify-content: center;
+
+	/*alineacion absoluta de todos los elementos*/
+	/* stretch por defecto, flex-end, center, flex-start(ajusta el background al contenido),*/
+	align-content:center; 
+}
+
+.item-order{
+	width: 100px; 
+	height:100px;
+
+	margin: 5px; 
+
+	color:hsla(0, 100%, 100%, 1);
+	text-align: center;
+	line-height:100px;
+}
+
+.item-order1 {
+	background-color: green;
+	order: 2;
+}
+
+.item-order2 {
+	background-color: blue;
+	order: 3;
+}
+
+.item-order3 {
+	background-color: red;
+}
+
+.item-order4 {
+	background-color: black;
+}
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,102 @@
+/**********************clip-path*******************/
+body {}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container-content {
+    background: lightgreen;
+    padding: 30px;
+
+    font-size: 20px;
+    text-align: center;
+
+    width: 500px;
+    height: 200px;
+}
+
+
+
+
+
+
+.main-container {
+    background: green;
+
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+
+    text-align: center;
+    color: white;
+    /* clip-path: forma(tamaño at x y);*/
+    clip-path: circle(5% at 50% 0%);
+    transition: .2s ease all;
+}
+
+.main-container.active{
+	clip-path: circle(100% at 50% 0%);
+}
+.nav-ul {
+	padding-inline-start: 0px;/*se uso para resetear 
+	un padding a modo de sangria que impedia alinear*/
+	list-style:none;
+}
+
+.nav-icon {
+	position:absolute;
+	top: 10px;
+	font-size: 20px;
+	cursor: pointer;
+	
+}
+
+.nav-icon:hover {
+	animation: rotar 1.5s alternate;
+}
+
+@keyframes rotar{
+	0% {transform: rotate(0deg);}
+	20% {transform: rotate(10deg);}
+	40% {transform: rotate(-15deg);}
+	60% {transform: rotate(15deg);}
+	80% {transform: rotate(-10deg);}
+	100% {transform: rotate(0deg);}
+}
+
+.nav-item {
+    text-decoration: none;
+
+    margin: 10px;
+    padding: 5px;
+
+    font-size: 30px;
+    cursor: pointer;
+
+   /*transition: 1s ease all;investigar*/
+}
+
+
+.main-container.active .nav-item{
+	animation: desplazamiento .4s ease;
+}
+
+@keyframes desplazamiento{
+	from{transform: translateY(1000px);}
+	to{transform: translateY(0);}
+}
+
+.nav-item:hover {
+	outline: 1px solid white;
+}
+
+.nav-content{
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+

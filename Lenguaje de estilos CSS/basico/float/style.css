@@ -1,0 +1,23 @@
+/*******************float****************/
+/*a quedado en desuso en gran medida, 
+sin embargo veremos un caso muy comun donde 
+aun su funcionalidad nos podria ayudar*/
+
+body{
+	overflow: hidden;
+}
+.section {
+	width: 50vw;
+	height: 80vh;
+	background: lightgreen;
+	overflow: auto;
+
+}
+
+.img {
+	width: 30vh;
+	/*nos permiter flotar las img a la derecha permitiendo
+	ocupar al parrafo el espacio disponible*/
+	float: right;
+
+}

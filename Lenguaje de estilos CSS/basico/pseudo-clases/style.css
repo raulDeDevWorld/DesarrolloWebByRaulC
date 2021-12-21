@@ -1,0 +1,184 @@
+/****************Pseudo Clases********************/
+/*-------------------active----------------------*/
+.botton1{
+	display:inline-block;
+	color:black;
+	background: white;
+	padding:10px;
+	margin: 50px;
+	text-decoration: none;
+	border: 1px solid black;
+	border-radius: 20px;
+	width: 70px;
+	text-align: center;
+}
+/* se activa cuando se hace click*/
+.botton1:active{
+	transform: scale(0); 
+}
+
+
+/*-------------------hover-----------------------*/
+/* se activa cuando se pasa el mause por encima*/
+.botton1:hover{
+	color: white;
+	border:1px solid green;
+	background: black;
+}
+
+
+/*-------------------focus---------------------*/
+/*se activa cuando es el foco principal es decir 
+cuando se hace click, tab sobre el*/
+.input-focus{
+	padding: 5px;
+	border-style: none none solid none;
+}
+.input-focus:focus{
+	padding: 5px;
+	outline-style: none;
+	background-color:hsla(100, 100%, 50%, .3)
+	}
+
+/*--------------------target---------------------*/
+/*añade mas dinamismo al los enlaces*/
+
+.text-menu{
+	text-decoration: none;
+}
+.text:target{
+	background-color:hsla(10, 100%, 50%, .1);
+}
+/*sin target*/
+.text-menu1{
+	text-decoration: none;
+}
+
+
+
+/*target y display none*/
+
+.div-target{
+display: none;
+}
+
+.div-target:target{
+	
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	top: 0;	
+
+	background-color: pink;
+	width: 300px;
+	height: 100px;
+
+	font-size: 25px;
+	text-align: center;
+
+	margin:auto;
+	padding: 30px;
+	outline:100vh solid hsla(10, 100%, 0%, .8);
+
+	display: flex;
+}
+.close{
+	position: absolute;
+	right:-25px;
+	top:-25px;
+
+	display: inline-block;
+	padding:10px 15px;
+
+	background-color: black;
+	border-radius: 25px;
+	text-decoration: none;
+	color: white;
+}
+
+
+
+/*----------------------child---------------------*/ 
+
+/*sirve para selecionar clases con el mismo valor(class="valor"),
+y dar estilos especificos a todos o alguno de ellos, previa seleccion,*/
+
+.paragraph:first-child{
+	background: red;
+
+}
+.paragraph:last-child{
+	background: blue;
+
+}
+
+/*selector de PARES*/
+.paragraph:nth-child(odd){
+	background: pink;
+}
+/*selector de IMPARES*/
+
+.paragraph:nth-child(even){
+	background: brown;
+}
+/*selector por NUMERO de ORDEN*/
+.paragraph:nth-child(2){
+	background: green;
+}
+/*selector de MULTIPLOS*/
+.paragraph:nth-child(3n){
+	background: lime;
+}
+
+/*selector de MULTIPLOS + N cantidades*/
+.paragraph:nth-child(3n+1){
+	background: yellow;
+}
+
+
+/*selector de MULTIPLOS + N cantidades 
+pero en orden inversa*/
+.paragraph:nth-last-child(3n+1){
+	background: lightblue;
+}
+
+
+/*-------------------empty--------------------*/
+/*seleciona los elementos vacios*/
+.paragraph-empty{
+	background: lime;
+	padding: 10px;
+}
+.paragraph-empty:empty{
+	padding: 0;}
+
+
+.container-forEmpty2{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+
+/*target y display*/
+.empty{
+	background: coral;
+	height: 200px;
+	width: 200px;
+
+	margin: 10px;
+	padding: 10px;
+
+	font-size: 100px;
+	line-height: 200px;
+	text-align: center;
+}
+.empty:empty{
+	height: 0;
+	width: 0;
+
+	margin: 0;
+	padding: 0;
+
+
+}

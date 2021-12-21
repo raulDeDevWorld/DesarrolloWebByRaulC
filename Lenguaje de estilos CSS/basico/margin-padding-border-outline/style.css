@@ -1,0 +1,87 @@
+/**************Margin Pading border y outline***************/
+.box1{
+	width: 200px;
+	height: 200px;
+	background: lightcoral;
+	/*espacion entre uno y otro elemento*/
+	margin:50px;
+	/*espacio entre el contenido y el borde */
+	padding: 30px;
+	/*espacio entre el padding y el margin*/
+	border: 20px solid black;
+	/*se dibuja por fuera del borde pero no se posisiona
+	es decir nunca empujara ningun elemento*/
+	outline: 20px solid green;/*none, hidden, dotted, dashed,
+	 solid, double, ridge, inset, outset,initial, inherit;*/
+	
+}
+.box2{
+	width: 200px;
+	height: 200px;
+	background: red;
+	/*shorthand margin
+	[(y x)(top x botton)(top right bottom left)] 
+	*/
+	margin:10px 20px 30px 40px;
+	/*shorthand padding
+	[(y x)(top x botton)(top right bottom left)] 
+	*/
+	padding:10px 20px 30px 40px;
+	/*shorthand border
+	widh style color
+	*/ 
+	border:10px solid green;
+	/*shorthand outline
+	widh style color
+	*/ 
+	outline: 10px solid black;
+}
+
+
+.box3{
+	width: 200px;
+	height: 200px;
+	background: yellow;
+	/*super shorthan padding
+	*/
+	padding:30px;	
+	/*super shorthan margin
+	*/
+	margin:50px;
+	/*shorthand border-width
+	top rigt bottom left
+	*/
+	border-width: 10px 20px 30px 40px;
+	 /*shorthand border-style
+	x y
+	*/
+	border-style: solid dotted;
+	 /*shorthand border-color
+	top x bottom
+	*/
+	border-color: black blue green;	
+	outline: 5px solid lime;
+	outline-offset: -50px;
+}
+
+
+/* deberia de funcionar las sgts propiedades en outline
+.box4{
+	width: 200px;
+	height: 200px;
+	background: yellow;
+			super shorthan padding
+	padding:30px;	
+			super shorthan margin
+	margin:50px;
+			shorthand outline-width
+			top rigt bottom left
+	outline-width: 10px 20px 30px 40px;
+			shorthand outline-color
+			top x bottom
+	outline-color: yellow green blue ;
+			shorthand outline-style
+			x y
+	outline-style: dotted solid;
+}
+*/

@@ -1,0 +1,96 @@
+.container {
+	margin: 30px;
+	padding: 30px;
+}
+
+/*-------------------------------------*/
+
+.box {
+	background: black;
+	color: white;
+	margin: 50px;
+	padding: 50px;
+}
+
+.box__vue-class {
+	line-height: 30px;
+	font-size: 20px;
+	font-style: italic;
+}
+
+/*-------------------------------------*/
+
+.box-two__vue-class-one {
+	letter-spacing: 5px;
+	background-color: red;
+	color: white;
+	padding: 50px;
+	margin: 50px;
+
+}
+.box-two__vue-class-two {
+	text-transform: uppercase;
+}
+
+/*-------------------------------------*/
+
+
+
+.box-three__vue-class-one {
+	letter-spacing: 5px;
+	color: white;
+	padding: 50px;
+	margin:50px;
+
+}
+.box-three__vue-class-two {
+	
+}
+
+
+
+
+
+.red {
+	background-color: red;
+}
+
+.yellow {
+	background-color: yellow;
+}
+
+.black {
+	background-color: black
+}
+.purple {
+	background-color: purple;
+}
+.blue {
+	background-color: blue;
+}
+.green {
+	background-color: green;
+}
+.pink {
+	background-color: pink;
+}
+
+/*
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

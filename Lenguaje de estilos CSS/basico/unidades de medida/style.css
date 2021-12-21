@@ -1,0 +1,27 @@
+/*------------unidades de medida-------------*/
+.title{
+	/*px medida absoluta*/
+	font-size: 16px;
+}
+.container{
+	/*rem medida relativa al viewport*/
+	font-size: 2rem;
+	border: 1px solid black;
+}
+
+.container__title1{
+	/*em medida relativa a su contenedor padre*/
+	font-size: 2em;
+}
+.container__title2{
+	font-size: 2rem;
+}
+
+
+
+
+width:100vw; (anchura del 100% de la anchura de la ventana gráfica)
+height:50vh; (altura del 50% de la altura de la ventana gráfica)
+line-height:3vh; (altura de línea del 3% de altura de la ventana gráfica)
+
+font-size:vmin y vmax para responsive investigar

@@ -1,0 +1,37 @@
+/************objet-fit***********/
+/*especifica como el contenido de un elemento remplazado 
+(img, video, etc) debería adaptarse según el alto y ancho 
+de su contenedor*/
+.objet-fit{
+
+background-color: brown;
+	width: 200px;
+	height: 400px;
+	/* 
+	el contenido del elemento remplazado 
+	llena todo el contenedor asi se redimencione
+	object-fit: fill;(por defecto)
+
+	se ajusta dentro del contenedor sin redimencionarse
+	sin importar si abarca todo su contenedor
+	object-fit:contain;
+
+	se ajusta dentro del contenedor sin redimencionarse
+	pero abarcando todo su contenedor
+	object-fit:cover;
+
+	mantiene el tamaño original del contenido en 
+	contenedores grandes y se redimenciona
+	en contenedores pequeños*/
+	object-fit: scale-down;
+} 
+/*
+---------------------animaciones----------------------
+	object-fit:cover ;
+	object-position: left;modifica la posicion
+	transition: object-position 5s;
+}
+.objet-fit:hover{
+	object-position: right;	
+
+*/

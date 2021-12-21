@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Document</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+
+<!-- v-text-->
+<div id="app">
+  <span v-text="msg"></span>
+  <!-- es equivalente a 
+  <span>{{msg}}</span>-->
+</div>
+
+	<script>
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    msg: 'hola mundo con v-text'
+
+  }
+
+})
+
+	</script>
+  <br><br>
+
+
+
+<!-- v-html  funcion similar al de innerHTML su uso debe ser con precaucion-->
+<div id="appTwo">
+  <article v-html="html"></article>
+</div>
+
+  <script>
+
+var app = new Vue({
+  el: '#appTwo',
+  data: {
+    html: `<section>hola mundo con v-html (*peligroso)</section>`
+
+  }
+
+})
+
+  </script>
+  <br><br>
+
+
+<!-- v-if  muestra el elemento si ok es true caso contrario no, a diferncia de v-show, v-if no muestra el contenido ni en el inspector -->
+<div id="appThree">
+  <div v-if="ok">hola mundo desde v-if="ok"</div>
+</div>
+
+  <script>
+
+var app = new Vue({
+  el: '#appThree',
+  data:{
+    ok: true
+  }
+
+})
+  </script>
+  <br><br>
+
+
+
+<!--puede agregarse un v-else posterior a v-if   -->
+<div id="appFour">
+  <div v-if="ok">hola mundo desde v-if="ok"</div>
+   <div v-else>hola mundo desde v-else</div>
+</div>
+
+  <script>
+
+var app = new Vue({
+  el: '#appFour',
+  data:{
+    ok: false
+  }
+
+})
+  </script>
+  <br><br>
+
+
+
+
+<!--puede agregarse un v-else posterior a v-if o a un v-else-if  -->
+<div id="appFive">
+  <div v-if="type === 'A'">
+    A
+  </div>
+  <div v-else-if="type === 'B'">
+    B
+  </div>
+  <div v-else-if="type === 'C'">
+    C
+  </div>
+  <div v-else>
+    Si no es A, B o C
+  </div>
+</div>
+  <script>
+
+var app = new Vue({
+  el: '#appFive',
+  data:{
+    type:'C'
+  }
+
+})
+  </script>
+  <br><br>
+
+
+
+
+<!-- v-show es similar a v-if con la unica diferencia q v-show trabaja con display none  -->
+<div id="appSix">
+  <div v-show="ok">hola mundo desde v-show="ok"</div>
+</div>
+
+  <script>
+
+var app = new Vue({
+  el: '#appSix',
+  data:{
+    ok: true
+  }
+
+})
+  </script>
+  <br><br>
+
+
+
+
+<!-- v-for permite recorrer un array, objeto, string, numero-->
+<div id='appSeven'>
+  <div v-for="item of items">
+    {{item}}
+  </div>
+</div>
+
+  <script>
+
+var app = new Vue({
+  el: '#appSeven',
+  data:{
+    items:  ['itemOne', 'itemTwo', 'itemThree' ]
+  }
+
+})
+
+  </script>
+  <br><br>
+
+
+
+
+
+<!-- v-on -->
+<div id='appEight'>
+  <div id="example-2">
+    <!-- `saludar` es el nombre de un método definido a continuación -->
+    <button v-on:click="saludar">v-on:click</button>
+  </div>
+</div>
+
+  <script>
+
+var example2 = new Vue({
+  el: '#example-2',
+  data: {
+  name: 'Vue.js'
+  },
+  // definir métodos bajo el objeto `methods`
+  methods: {
+    saludar: function () {
+      // `this` dentro de los métodos apunta a la instancia de Vue
+      alert('v-on:click con' + this.name + '!')
+    }
+  }
+})
+
+
+  </script>
+  <br><br> 
+
+
+<!-- v-model -->
+<div id="appNine">
+  <!-- v-model almacena en message el contenido ingresado al input-->
+  <input v-model="message" placeholder="v-model">
+  <p>El mensaje es: {{ message }}</p>
+</div>
+
+
+  <script>
+
+var app = new Vue({
+  el: '#appNine',
+  data: {
+  message: ''
+  }
+})
+  </script>
+
+
+
+
+<!-- v-bind: {object} -->
+<div id="appTen">
+   <!-- Podemos pasar un objeto a v-bind:class para la asignación dinámica de clases:-->
+  <!-- la clase active se activa siempre y cuando isActive es true-->
+  <div v-bind:class="{ active: isActive }">v-bind:class="red"</div>
+</div>
+
+
+  <script>
+
+var app = new Vue({
+  el: '#appTen',
+  data: {
+  isActive: true
+  }
+})
+  </script>
+<style>
+  .active {
+    background-color: red;
+    color: white;
+    padding: 10px;
+    margin: 5px;
+    width: 500px;
+  }
+</style>
+
+
+
+<!-- v-bind: con multiples clases -->
+<div id="appEleven">
+  <!-- la clase active se activa siempre y cuando isActive es true-->
+  <div v-bind:class="{ active: isActive, noActive: state}">v-bind:class="multiples clases"</div>
+</div>
+
+
+  <script>
+
+var app = new Vue({
+  el: '#appEleven',
+  data: {
+  isActive: false,
+  state: true,
+  }
+})
+  </script>
+<style>
+  .active {
+    background-color: red;
+    color: white;
+    padding: 10px;
+    margin: 5px;
+    width: 500px;
+  }
+  .noActive {
+    background-color: blue;
+    color: white;
+    padding: 10px;
+    margin: 5px;
+    width: 500px;
+  }
+</style>
+
+
+
+
+<!-- v-bind: -->
+<div id="appTwelve">
+  <!--en este caso solo pasamos el objeto a aplicar-->
+  <div v-bind:class="classObject"> v-bind: and property computed</div>
+</div>
+
+
+  <script>
+
+var app = new Vue({
+  el: '#appTwelve',
+  data: {
+  isActive: true,
+  state: false,
+  },
+  computed: {
+    classObject: function () {
+      return {
+        active: this.isActive && !this.state,
+        noActive: this.state && !this.isActive
+      }
+    }
+  }
+
+
+
+})
+  </script>
+<style>
+  .active {
+    background-color: red;
+    color: white;
+    padding: 10px;
+    margin: 5px;
+    width: 500px;
+  }
+  .noActive {
+    background-color: blue;
+    color: white;
+    padding: 10px;
+    margin: 5px;
+    width: 500px;
+  }
+</style>
+
+
+
+
+
+
+
+<!-- v-bind:[array]  -->
+<div id="appThirteen">
+  <!--Pasamos un array a v-bind:class para aplicar una lista de clases:-->
+  <div v-bind:class="[classOne, classTwo]">v-bind:[array]</div>
+</div>
+
+
+  <script>
+
+var app = new Vue({
+  el: '#appThirteen',
+  data: {
+    classOne: 'styleOne',
+    classTwo: 'styleTwo'
+  }
+})
+  </script>
+
+<style>
+  .styleOne {
+    background-color: red;
+    color: white;
+
+  }
+  .styleTwo {
+    margin: 5px;
+    padding: 10px;
+    width: 500px;
+  }
+</style>
+
+
+
+
+
+
+
+
+
+<!-- v-bind:[array dinamico] -->
+<div id="appFourteen">
+  <!--una opcion es pasar un operador ternario pero es mejor pasar un objeto dentro del array-->
+  <div v-bind:class="[isActive ? 'styleTwo' : '', 'styleOne']">v-bind:[array dinamico]</div>
+</div>
+
+
+  <script>
+
+var app = new Vue({
+  el: '#appFourteen',
+  data:{
+    isActive: true,
+  } 
+})
+  </script>
+
+
+<style>
+  .styleOne {
+    background-color: red;
+    color: white;
+    border: 1px solid black;
+
+  }
+  .styleTwo {
+    margin: 5px;
+    padding: 10px;
+    width: 500px;
+  }
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

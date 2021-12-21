@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+  </head>
+  <body>
+   <!-- se deben encerrar en un div los contenidos que se trabajaraan con vue-->
+    <div id="app">
+<!-- gracias a la interpolacion se pueden llamar a las propiedades que estan dentro de data-->
+      <h1>{{titulo}}</h1>
+
+
+      <ul>
+<!-- Ciclo for of en Vue-->
+        <li v-for='fruta of frutas'>{{fruta}}</li>
+      </ul>
+
+
+<!-- v-model conecta un elemento del hatml con JS-->
+        <input type="text" v-model='nuevaFruta'>
+        <button v-on:click="agregarFruta">Agregar</button>
+
+      <ul>
+        <li v-for='fruta of frutasTwo'>{{fruta.cantidad}} - {{fruta.nombre}}
+<!-- condicionales en Vue-->
+        <span v-if='fruta.cantidad === 0'>Sin Stock</span>
+        </li>
+      </ul>
+      
+    </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="app.js"></script>
+  </body>
+</html>

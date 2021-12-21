@@ -1,0 +1,1155 @@
+/*selectores
+
+
+
+
+*//*selector universal *{
+	color: hsla(200, 100%, 50%, 1);
+}	
+*/
+		
+/*selector de atributo 
+[href]{
+	color: black ;
+}
+
+[href="#"]{
+	color: green ;
+}
+
+
+
+[class~="verde"]{ (a todos los que poseen una class verde)
+	color: red;
+}
+
+[class|="verde"]{ (en especifico al que tiene clase verde o comienza por un guion)
+	color:lime;
+}
+
+
+[class^="rojo"]{ (selecciona a la clase que empiezan con ese valor)
+	color:steelblue;
+}
+
+[class$="rojo"]{(se aplica a las clases que terminan con el valor rojo)
+	color:red;
+}
+
+[class*="rojo"]{(se aplica a todas las clases con el rojo)
+	color:red;
+}
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*herencia
+
+.parrafo1{
+	color: green;
+}
+.enlaceP1{
+	color:inherit;
+}
+*/
+
+
+
+
+
+
+
+/*
+.tituloH1{
+	background: red;
+	height: 100px;
+	width: 100px
+}
+.subtituloH2{
+	background: red;
+	height: 100px;
+	width: 100px
+}
+a{
+	background: lime;
+}
+Margin y Pading
+.box1{
+	width: 200px;
+	height: 200px;
+	background: lightcoral;
+	padding: 10px;
+	border: 2px solid black;
+	outline: 5px solid green;
+	margin:20px;
+}
+.box2{
+	width: 200px;
+	height: 200px;
+	background: red;
+	margin:1em, 2em, 3em, 4em; [(y,x)(top, x, botton)(top, right, bottom, left;)] 
+}
+
+
+
+
+
+
+border
+admite none, hidden, dotted, dashed, solid, double, ridge, inset, outset,initial, inherit;
+
+
+
+.box1{
+	width: 200px;
+	height: 200px;
+	background: red;
+	margin:20px;
+
+	border:10px solid green;
+	border-top: none;
+	
+}
+.box2{
+	width: 200px;
+	height: 200px;
+	background: red;
+	margin:20px;
+	border-width: 10px 20px 30px 40px; (top rigt bottom left
+	border-style: solid dotted; (y x)
+	border-color: yellow blue green ;(top x bottom)
+	
+}
+
+
+
+
+
+outline es igual que border la unica diferencia es outline
+
+
+.box2{
+	width: 200px;
+	height: 200px;
+	background: red;
+	margin:20px;
+	outline: 5px solid black;
+	outline-offset: -45px;
+}
+
+
+
+
+
+
+
+
+**********************POSITION***************************
+Se crean atributos para mover ELEMENTOS top botton right left y z;
+
+------------------position relative----------------------
+mantiene su posicion apesar se que desplaza con libertad por el viewport
+
+.box1, .box2{
+	width: 200px;
+	height: 200px;
+	font-size: 20px;
+	margin: 20px;
+	text-align: center;;
+}
+.box1{
+	background: lime;
+	position: relative;
+	top:200px;
+}
+.box2{
+	background: pink;
+	position:relative;
+	z-index:10;
+}
+
+
+
+
+
+
+---------------------position absolute----------------------
+ pierde su posicion y puede desplazarse solo en un contenedor posicionado
+
+
+.flex-container, .flex.item1, .flex.item2, .flex.item3, .flex.item4, .flex.item5 {
+	font-size: 7px;
+	text-align: center;	
+}
+
+.flex-container{
+	margin: 20px;
+	width: 300px;
+	height: 300px;
+	border:3px solid black;	
+	position: relative;
+}
+
+.flex-item1{
+	border: 3px solid green;
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	
+}
+.flex-item2{
+	border: 3px solid red;
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	bottom: 0;
+	right:0;
+} 
+.flex-item3{
+	border: 3px solid yellow;
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	top:0;
+	right:0;
+}
+.flex-item4{
+	border: 3px solid blue;
+	width: 30px;
+	height: 30px;
+	position:absolute;
+	top:0;
+	left:0;
+}
+.flex-item5{
+	border: 3px solid lime;
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	top:0;
+	bottom: 0;
+	right:0;
+	left:0;
+	margin:auto;
+
+}
+
+
+
+
+
+
+
+position fixed pierde su posicion pero se posiciona en relacion al viewport
+
+body{
+	padding-top:4em;
+}
+.header{
+	background: hsla(0,100%,0%,.5);
+	position: fixed;
+	width: 100%;
+	top:0;
+}
+.main-menu{
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-left: 0;
+	list-style: none;
+	display:flex;
+	justify-content: space-around;
+}
+.main-menu__item{
+	line-height: 3;
+}
+.main-menu__link{
+	text-decoration: none;
+	font-size: 1.2em;
+	color: white;
+}
+.tituloH1{
+	margin-top: 0;
+}
+
+
+
+
+
+.logo{
+	background: black;
+	color:white;
+	font-size: 100px;
+	width: 100%;
+	height: 300px;
+	text-align: center;
+	line-height: 3em;
+
+}
+*/
+
+
+.header{
+	background: hsla(0,100%,0%,.5);
+	position: sticky;
+	width: 100%;
+	top:0;
+}
+.main-menu{
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-left: 0;
+	list-style-type: none; /*list-style-type:lower-latin; para colocar viñetas|
+	list-style:none; para borrar viñetas que aparecen junto a los items  de la lista*/
+	display:flex;
+	justify-content: space-around;
+}
+.main-menu__item{
+	line-height: 3;
+}
+.main-menu__link{
+	text-decoration: none;
+	font-size: 1.2em;
+	color: white;
+}
+.tituloH1{
+	margin-top: 0;
+}
+
+
+/*para centrear una imagen en bloque aunque creo 
+que tambien puen funcionar en inline-block
+.menu-logo{
+	display:block;
+	margin-right: auto;
+	margin-left: auto;
+	width: 20%;
+}
+para centrear en inline-block
+.menu-logo{
+	display:inline-block;
+	text-align: center;
+	width: 20%;
+}
+*/
+.logo{
+	display: flex;
+	background: black;
+	font-size: 10px;
+	width: 100%;
+	height: 300px;
+	align-items: center;
+}
+.menu-logo{
+	width: 20%;
+
+}
+.title-logo{
+	color:white;
+	display: inline-block;
+}
+
+
+
+
+/**/
+/*
+
+
+
+.display_none{
+	background: lime;
+	display: none;
+}
+.display_inline-block{
+	background: red;
+	width: 200px;
+	height: 200px;
+	display: inline-block;
+}
+
+
+
+---------------------------pseudo clases-------------------------------
+
+
+
+.main-botton{
+	display:inline-block;
+	color:white;
+	background: green;
+	padding:10px;
+	margin: 50px;
+	text-decoration: none;
+	border-radius: 20px;
+	width: 70px;
+	text-align: center;
+}
+.main-botton:active{
+	transform: scale(.9) 
+}
+.tituloH1:hover{
+	color: red;
+}
+
+.main-botton:hover{
+	color: black;
+	background: white;
+	outline:1px solid green;
+}
+
+*/
+
+.main-botton{
+position: relative;
+display: inline-block;
+background: black;
+padding: 10px 30px;
+margin: 20px;
+border:2px solid black;
+text-decoration: none;
+color:white;
+border-radius: 13px;	
+}
+
+.main-botton:hover{
+	background: white;
+	color:black;
+}
+
+.main-botton:active{
+	transform: scale(.9);
+}	
+
+
+.input:focus{
+	padding: 10px;
+	background: yellow;
+}
+
+.text-menu{
+	background: pink;
+	display:block;
+	position:sticky;
+	width: 100%;
+	top:0;
+	text-decoration: none;
+	height: 20px;
+	text-align: center;
+}
+.text:target{
+	padding-top: 100px;
+}
+
+/*class child 
+
+sirve para selecionar clases con el mismo valor
+y dar estilos especificos a clases determinadas sin imporatar
+ el valor(nombre) de la clase
+
+.paragraph{
+	background: lime;
+	padding: 10px;
+}
+ 
+.paragraph:empty{
+	padding: 0;
+}*/
+
+.paragraph:first-child{
+	background: red;
+
+}
+.paragraph:last-child{
+	background: blue;
+
+}
+
+/*pares*/
+.paragraph:nth-child(odd){
+	background: pink;
+}
+/*impares*/
+
+.paragraph:nth-child(even){
+	background: brown;
+}
+/*añadir estilo por numero de orden*/
+.paragraph:nth-child(2){
+	background: green;
+}
+/*multiplos*/
+.paragraph:nth-child(3n){
+	background: lime;
+}
+
+/*multiplos + 1*/
+.paragraph:nth-child(3n+1){
+	background: yellow;
+}
+
+
+/*multiplos + 1*/
+.paragraph:nth-last-child(3n+1){
+	background: lightblue;
+}
+
+
+
+
+/*
+***********************background***************************
+*/
+
+.box{
+	width: 100px;
+	height: 100px;
+	border:1px solid brown;
+	margin:3px;
+	display: inline-block;
+}
+
+.box1{
+	background-color: purple;
+}
+.box2{
+	background-image: url(imagen.jpg);
+}
+.box3{
+	background-image: url(imagen.jpg);
+	background-size:cover;/*x(10%) y(10%), cover(foto escapa al contenedor) y contain 
+	(se ajusta al container aunque no cubra todo)*/ 
+}
+.box4{
+	background-image: url(logo.png);
+	background-size: 20%;
+	background-repeat:repeat-x;/*repeat, no reapet, repeat-x, repeat-y*/
+}
+.box5{
+	background-image: url(logo.png);
+	background-size: 20%;
+	background-repeat:no-repeat;
+	background-position:center;/*right top,etc;x% y%;
+	 initial, inherit*/
+}
+.box6{
+	background-image:url(imagen.jpg); ;
+	background-size: contain;
+	background-repeat:no-repeat;
+	padding: 20px;
+	background-origin:content-box;/*(redimenciona la imagen y lo muestra desde donde le decimos)border box,
+	 padding-box, content-box(rellena el contenido menos el padding)*/
+}
+.box7{
+	background-image: url(imagen.jpg);
+	background-size: contain;
+	background-repeat:no-repeat;
+	padding:20px;
+	background-clip:content-box;/*(no redimencion, lo que hace es recortar la imagen y mostrar desde donde le decimos )border box,
+	 padding-box, content-box(rellena el contenido menos el padding)*/
+}
+.box8{
+	background-image: url(imagen.jpg);
+	background-attachment: fixed;
+	/*(la imagen posisiona en relacion al viewpor)*/
+}
+	
+.box9{
+	background-image:
+					url(logo.png),
+					url(imagen.jpg);
+	background-size:20%, cover;
+	background-repeat: no-repeat;
+	background-position: bottom right, center;
+	background-attachment: scroll, fixed;
+
+
+}
+
+
+
+
+/*
+*********************tipografias*************************
+
+font-size:px tamaño especifico
+		  em en relacion al padre
+		  rem en relacion a la fuente general;
+
+font-size:vmin y vmax para responsive investigar
+
+.titulo-tipografico{
+	font-family:cambria,cochin, georgia,times,"times new roman"; 
+	font-size:8vmin;
+	font-style:italic;
+	font-weight:;
+}
+*/
+
+
+
+.titulo-tipografico{
+	text-transform:uppercase; /*uppercase mmayusculas, lowercase minisculas, capitalize primera letra en mayuscula*/
+	text-align: center;/*center, right, left, justify. Solo con elementos en bloque*/
+	color: white;
+	font-size: 50px;
+}
+/*.parrafo-tipografico{
+	text-indent: 100px;solo en ellementos de bloque
+	letter-spacing: 1px; spacio entre letras
+}
+*/
+.tipografias{
+	padding: 100px;
+	background-color: black;
+	font-family: 'Raleway', sans-serif;
+}
+
+.parrafo-tipografico{
+	color: white;
+	font-size: 30px;
+	font-weight: 100;
+
+}
+
+
+
+
+
+
+
+
+
+
+img{
+	display:block;
+	width: 100%;/*max-width para hacer responsive sin abarcar todo el viewport*/	
+}
+
+
+
+
+.objet-fit{
+	background-color: brown;
+	width: 200px;
+	height: 400px;
+	/* por defecto
+	object-fit: fill;
+	object-fit:contain;
+	object-fit:cover ;
+	object-fit: scale-down; aplica el valor correcto*/
+
+	object-fit:cover ;
+	object-position: left;/*modifica la posicion*/
+	transition: object-position 5s;
+}
+
+
+.objet-fit:hover{
+	object-position: right;	
+}
+
+
+.filter{
+	width: 300px;
+	filter: blur(1px);
+}
+.filter:hover{
+	filter: none;
+}
+
+
+.brightness{
+	width: 300px;
+	filter: brightness(.5);
+}
+
+.brightness:hover{
+	filter:none;
+}
+.contraste{
+	width: 300px;
+	filter: opacity(.5);/*saturate, sepia, grayscale, invert, contrast*/
+}
+
+.contraste:hover{
+	filter:none;
+}
+
+.shadow{
+	width: 300px;
+	filter: drop-shadow(10px 10px 10px
+	 black);/*h-shadow v-shadow blur spread color */
+}
+
+.shadow:hover{
+	filter:none;
+}
+
+
+.circle{
+	width: 300px;
+	filter: hue-rotate(270deg);
+}
+
+.circle:hover{
+	filter: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.degradados{
+	display: inline-block;
+	color: white;
+	padding: 15px 70px;
+	text-align: center;
+	text-decoration: none;
+	border: 1px solid black;
+	margin: 30px;
+	border-radius: 30px;
+	background-image: linear-gradient(red, blue) 	
+}
+.degradados:hover{
+	background-image:linear-gradient(blue, red);
+	
+}
+
+
+.degradados2{
+	display: inline-block;
+	color: white;
+	padding: 15px 70px;
+	text-align: center;
+	text-decoration: none;
+	border: 1px solid black;
+	margin: 30px;
+	border-radius: 30px;
+	background-image: linear-gradient(white, black, white) 	
+}
+.degradados2:hover{
+	background-image:linear-gradient(black,white,black);
+	color: black;
+}
+
+.degradados3{
+	display: inline-block;
+	color: white;
+	padding: 15px 70px;
+	text-align: center;
+	text-decoration: none;
+	border: 1px solid black;
+	margin: 30px;
+	border-radius: 30px;
+	background-image: linear-gradient(to top left, white, black, white) 	
+}
+.degradados3:hover{
+	background-image:linear-gradient(to bottom right, black,white,black);/*()*/
+	color: black;
+}
+
+.degradados4{
+	display: inline-block;
+	color: white;
+	padding: 15px 70px;
+	text-align: center;
+	text-decoration: none;
+	border: 1px solid black;
+	margin: 30px;
+	border-radius: 30px;
+	background-image: linear-gradient(90deg, white, black, white) 	
+}
+.degradados4:hover{
+	background-image:linear-gradient(90deg, black,white,black);/*()*/
+	color: black;
+}
+
+.degradados5{
+	color: white;
+	padding: 100px 100px;
+	width: 100px;
+	height: 100px;
+	text-align: center;
+	text-decoration: none;
+	border: 1px solid black;
+	margin: 30px;
+	border-radius: 30px;
+	background-image: linear-gradient(brown 50%, black 50%) 	
+}
+.degradados5:hover{
+	background-image:linear-gradient(black 50%,brown 50%);/*()*/
+	color: black;
+}
+
+.degradados6{
+	color: white;
+	padding: 100px 100px;
+	width: 100px;
+	height: 100px;
+	text-align: center;
+	text-decoration: none;
+	border: 1px solid black;
+	margin: 30px;
+	border-radius: 30px;
+	background-image: radial-gradient(brown, black) 	
+}
+.degradados6:hover{
+	background-image:radial-gradient(black, brown);/*()*/
+	color: black;
+}
+
+
+
+.degradados7{
+	display: inline-block;
+	color: white;
+	padding: 15px 70px;
+	text-align: center;
+	text-decoration: none;
+	border: 1px solid black;
+	margin: 30px;
+	border-radius: 30px;
+	background-image: radial-gradient(brown, black) 	
+}
+.degradados7:hover{
+	background-image:radial-gradient(black, brown);/*()*/
+}
+
+
+
+
+.degradados8{
+	display: inline-block;
+	color: white;
+	padding: 15px 70px;
+	text-align: center;
+	text-decoration: none;
+	border: 1px solid black;
+	margin: 30px;
+	border-radius: 30px;
+	background-image: radial-gradient(circle 70px, brown, black) 	
+}
+.degradados8:hover{
+	background-image:radial-gradient(circle 70px,black, brown);/*()*/
+}
+
+
+
+
+
+
+.degradados9{
+	color: white;
+	padding: 100px 100px;
+	width: 100px;
+	height: 100px;
+	text-align: center;
+	text-decoration: none;
+	border: 1px solid black;
+	margin: 30px;
+	border-radius: 30px;
+	background-image: radial-gradient(circle 100px at top, black 50%, brown 50%) 	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.article{
+	border:1px solid black;
+	height: 500px;
+	overflow: auto;/*hiden, scroll*/
+	padding: 10px;
+}
+
+.article-float{
+	overflow: hidden;/*hace que el contenedor padre contenga a la imagen flow*/	
+}
+
+.article-float img{
+	width: 400px;
+	height: 300px;
+	float: right;
+	margin-left:20px; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*flexbox*/
+.flex-container{
+	background-color: hsla(0, 100%, 50%, .3);/*(color,saturacion100%
+	 "color puro",luminosidad50%"color puro",
+	 transparencia y opacidad)*/
+	padding: 20px;
+	margin:50px;
+	display: flex;
+	flex-wrap: wrap/*no-wrap por defecto, wrap-reverse, wrap controla el salto de elementos*/
+	/*flex-direction: column-reverse;row por defecto,row reverse, column, column-reverse */
+
+}
+
+.flex-item{
+	width: 50px; 
+	height:50px;
+	margin: 5px; 
+	line-height:30px;
+	color:hsla(0, 100%, 100%, 1);
+	text-align: center;
+	background-color: hsla(0,100%,50%,1)
+
+}
+
+/*alineacion en main axis*/
+
+.flex-container2{
+	background:lime;
+	margin:100px;
+	padding: 0px;
+	width: 300px;
+	height: 300px;
+	display: flex;
+	justify-content: space-evenly;/*flex-start por defecto, center,space-between,
+	 flex-end,space-around,space-evenly*/
+}
+
+
+.flex-item2{
+	background:yellow;
+	margin:1px;	
+	width: 40px;
+	height: 40px;
+	text-align: center;
+	line-height: 50px;
+
+}
+
+/*alineacion en cross axis*/
+
+.flex-container3{
+	background:yellow;
+	margin:100px;
+	padding: 10px;
+	width: 300px;
+	height: 300px;
+	display: flex;
+	justify-content: flex-start;/*flex-start por defecto, center,space-between, flex-end,space-around,space-evenly*/
+
+	align-content:; /*para varias lineas*/
+}
+
+
+
+.flex-item3{
+	background:lime;
+	margin:3px;	
+	width: 40px;
+	height: 40px;
+	text-align: center;
+	line-height: 50px;
+	
+}
+
+
+
+/*align content*/
+.flex-container4{
+	background:lightblue;
+	margin:100px;
+	padding: 10px;
+	width: 300px;
+	height: 300px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;/*flex-start por defecto, center,space-between, flex-end,space-around,space-evenly*/
+	align-items:;/* stretch por defecto, flex-end, center, flex-start(ajusta el background al contenido), para una solo linea*/
+	align-content:center; /*flex-end, flex-start, center,para varias lineas*/
+}
+
+
+
+.flex-item4{
+	background:brown;
+	margin:3px;	
+	width: 40px;
+	height: 40px;
+	text-align: center;
+	line-height: 50px;
+	
+}
+
+
+.box-flex{
+	border: 1px solid black;
+	width: 500px;
+	height: 500px;
+	margin:5px;
+	display:flex;
+	align-items: center;
+}
+
+.box-flex img{
+	height: 100px;
+	width: auto;
+}
+
+
+/*
+shorthand para flex-flow: flex-direction wrap
+*/
+
+
+.flex-grow{
+	background-color:lightblue;
+	width: 400px;
+	height: 300px;
+	display: flex;
+}
+.item-grow{
+	background-color: pink;
+	display: flex;
+	width: 200px;
+	height: 50px;
+	align-items: center;
+	justify-content: center;
+	order: 0;
+}
+
+
+/*flex-grow hace que los hijos seleccionados un 
+tomen espacio extra en funcion a divisiones asignadas
+.item-grow:nth-child(2){
+	background-color: lime;
+	flex-grow: 1;
+}
+
+.item-grow:nth-child(3){
+	background-color: yellow;
+	flex-grow: 2;
+}
+
+
+
+
+
+flex-shrink hace que el item ceda espacios
+.item-grow:nth-child(2){
+	background-color: lime;
+	flex-shrink: 2;
+}
+
+.item-grow:nth-child(3){
+	background-color: yellow;
+	flex-shrink: ;
+}
+
+
+
+
+flex-basis hace que el item conserve su tamaño
+desiganado pase lo que pase,pesa mas que width
+.item-grow:nth-child(2){
+	background-color: lime;
+	flex-basis: 300px;
+}
+
+.item-grow:nth-child(3){
+	background-color: yellow;
+	flex-shrink: ;
+}
+
+
+
+shorthand flex:grow shrink basis.
+Order reordena los items a afinadad*/
+.item-grow:nth-child(2){
+	background-color: lime;
+	flex:0 1 300px;
+	order: 4;
+}
+
+.item-grow:nth-child(3){
+	background-color: yellow;
+	flex-shrink: ;
+	order: 2;
+}
+
+
+
+
+
+
+
+
+
+/*GRID*/
+
+
+.grid-container{
+
+}
+.grid-item{
+
+}
+
+
+
+
+
+
+
+
+
+

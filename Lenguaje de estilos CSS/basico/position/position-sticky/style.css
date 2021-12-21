@@ -1,0 +1,31 @@
+/*
+----------------------------position sticky------------------------------
+funcionalidad similar a position-fixed pero con mas control de posicion
+dentro de su contenedor padre
+*/
+
+
+.header{
+	background: hsla(0,100%,0%,.5);
+	position: sticky;
+	width: 100%;
+	top:0;
+}
+
+.main-menu{
+	list-style-type: none; /*list-style-type:lower-latin; para 
+	colocar viñetas|list-style:none; para borrar viñetas 
+	que aparecen junto a los items  de la lista*/
+	display:flex;
+	justify-content: space-around;/*propiedad de display-flex*/
+}
+.main-menu__item{
+	line-height: 30px;
+}
+.main-menu__link{
+	text-decoration: none;
+	font-size: 1.2em;
+	color: white;
+}
+
+

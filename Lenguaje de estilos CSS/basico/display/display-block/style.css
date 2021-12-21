@@ -1,0 +1,15 @@
+/*
+----------------display block--------------
+convierte un elemento en linea en elemento en bloque
+*/
+.elemento1{
+	background-color: lightblue;
+}
+.elemento2{
+	background: lightblue;
+}
+.elemento3{
+	background: lightblue;
+	display: block;
+
+}

@@ -1,0 +1,28 @@
+/***************z-index**************/
+.box1{
+	height: 200px;
+	width: 200px;
+	background-color: blue;
+	position: relative;
+	/*posisiona los elementos en el eje-z
+	es decir cual se sobrepone sobre cual*/
+	z-index: 30;
+}
+.box2{
+	height: 200px;
+	width: 200px;
+	background-color: purple;
+	position: relative;
+	top:-100px;
+	left: 100px;
+	z-index: 20;
+}
+.box3{
+	height: 200px;
+	width: 200px;
+	background-color: black;
+	position:relative;
+	top: -200px;
+	left: 200px;
+	z-index: 10;
+}

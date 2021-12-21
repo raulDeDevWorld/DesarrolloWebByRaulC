@@ -1,0 +1,29 @@
+.cards {
+	display: flex;
+	width: 100vw;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.card {
+	position: relative;
+	display: inline-block;
+	min-width: 200px;
+	max-width: 400px;
+}
+
+img {
+	display: inline-block;
+	width: 100%;	
+}
+
+.span {
+	position: absolute;
+	top: 5px;
+	left:10px;
+	padding: 5px;
+	background-color: yellow;
+	border-radius: 10px;
+	border: 1px solid black;
+
+}

@@ -1,0 +1,24 @@
+/*------------unidades de medida-------------*/
+.title{
+	/*px medida absoluta*/
+	font-size: 16px;
+}
+.container{
+	/*rem medida relativa al viewport*/
+	font-size: 2rem;
+	border: 1px solid black;
+}
+
+.container__title1{
+	/*em medida relativa a su contenedor padre*/
+	font-size: 2em;
+}
+.container__title2{
+	font-size: 2rem;
+}
+
+font-size:px tamaño especifico
+		  em en relacion al padre
+		  rem en relacion a la fuente general;
+
+font-size:vmin y vmax para responsive investigar

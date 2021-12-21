@@ -1,0 +1,29 @@
+/*
+**********************POSITION***************************
+Se crean atributos para mover ELEMENTOS top botton right left y z;
+
+------------------position relative----------------------
+mantiene su posicion apesar se que desplaza con libertad por el viewport*/
+
+.box1, .box2, .box3{
+	width: 200px;
+	height: 200px;
+	font-size: 20px;
+	margin: 50px;
+	text-align: center;
+}
+.box1{
+	background: lime;
+	position: relative;
+	top:-50px;
+}
+.box2{
+	background: pink;
+	position: relative;;
+	left: 190px;
+	top: -260px;
+	z-index:10;
+}
+.box3{
+	background: yellow;
+}

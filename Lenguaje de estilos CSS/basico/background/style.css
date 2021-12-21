@@ -1,0 +1,96 @@
+
+/*
+***********************background***************************
+*/
+.box{
+	width: 300px;
+	height: 300px;
+	border:1px solid brown;
+	margin:3px;
+	
+}
+/*--------------------background-color----------------------
+para poner un color de background
+*/
+.box1{
+	background-color: purple;
+}
+/*
+-----------------background-image-------------------------
+para poner una imagen de background
+*/
+.box2{
+	background-image: url(imagen.jpg);
+}
+/*----------------background-size--------------------------
+para controlar el tamaño de una imagen en relacion a su contenedor
+*/
+.box3{
+	background-image: url(imagen.jpg);
+	background-size:cover;/*x(10%) y(10%), cover(foto escapa al contenedor)
+	 y contain (se ajusta al container aunque no cubra todo)*/ 
+}
+/*---------------background-repeat-----------------------------
+para controlar la repeticion de una background
+*/
+.box4{
+	background-image: url(logo.png);
+	background-size: 20%;
+	background-repeat:repeat-x;/*repeat, no reapet, repeat-x, repeat-y*/
+}
+/*---------------background-position---------------------------
+para controlar la posicion de un backgroun en relacion a su contenedor
+*/
+.box5{
+	background-image: url(logo.png);
+	background-size: 20%;
+	background-repeat:no-repeat;
+	background-position:center;/*right top,etc;x% y%;
+	 initial, inherit*/
+}
+/*---------------background-origin---------------------------
+redimenciona la imagen y lo muestra desde donde le decimos
+esto en relacion a su contenedor
+*/
+.box6{
+	background-image:url(imagen.jpg); ;
+	background-size: contain;
+	background-repeat:no-repeat;
+	padding: 20px;
+	background-origin:content-box;/*border box,
+	 padding-box, content-box(rellena el contenido menos el padding)*/
+}
+/*---------------background-clip---------------------------------
+no redimenciona la imagen, lo que hace es recortar la imagen 
+y mostrarlo desde donde le decimos
+esto en relacion a su contenedor*/
+.box7{
+	background-image: url(imagen.jpg);
+	background-size: contain;
+	background-repeat:no-repeat;
+	padding:20px;
+	background-clip:content-box;/*border box,
+	 padding-box, content-box(rellena el contenido menos el padding)*/
+}
+/*--------------background-attachment------------------
+la imagen se posisiona en relacion al viewpor
+*/
+.box8{
+	background-image: url(imagen.jpg);
+	background-attachment: fixed;/*scroll (por default)*/
+}
+/*-----------------multiples url()------------------
+se pueden colocar multiples imagenes
+*/
+.box9{
+	background-image:
+					url(logo.png),
+					url(imagen.jpg);
+	background-size:20%, cover;
+	background-repeat: no-repeat;
+	background-position: bottom right, center;
+	background-attachment: scroll, fixed;
+}
+
+
+

@@ -1,0 +1,14 @@
+.padre {
+	background-color: black;
+	margin: 50px;
+	height: 400px;
+	width: 400px;
+	color: white;
+	padding: 20px;
+	font-size: 20px;
+}
+
+.hijo {
+	background-color: green;
+	padding: 30px;
+}

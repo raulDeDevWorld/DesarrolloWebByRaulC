@@ -1,0 +1,134 @@
+/**************transiciones************/
+/*(los dos primeros son indispensables)
+transition-property: backgroun-color; all none propiedad
+transition-duration: 2s; s/ms
+
+transition-delay:2s; retraso antes de la transicion;
+
+*/
+
+body{
+	margin: 0;
+}
+
+
+
+
+.box{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+	width: 200px;
+	height: 200px;
+
+	background-color: green;
+	color: white; 
+	font-size: 30px;
+
+	transition-property: background-color, color;
+	transition-duration: 3s;
+
+
+
+}
+.box:hover{
+	background-color: lightgreen;
+	color: black;
+}
+
+
+
+/*-----------calc/transition-timing-function-----------*/
+
+.calc-container, .container{
+	background-color: lightblue;
+}
+
+.calc-item, .item{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	margin: 10px;
+
+	width: 180px;
+	height: 100px;
+	
+	background-color: darkblue;
+
+	color: white;
+	font-size: 30px;
+}
+
+
+
+
+/*-------------------------calc----------------------------*/
+/*permite calcular el recorido a darse de forma mas precisa*/
+
+.calc-item{
+	transition-property: transform;
+	transition-duration: 3s;
+}
+
+.calc-item:hover{
+	transform: translateX(calc(100vw - 100%));
+}
+
+
+
+/*----------------Transition-timing-function-----------------*/
+.item{
+	transition-property: transform;
+	transition-duration: 3s;
+}
+.container:hover .item{
+	transform: translateX(calc(100vw - 100%));
+}
+
+
+
+
+
+/*ease: 
+La transición comienza lentamente, acelera bruscamente 
+y luego disminuye lentamente hacia el final.*/
+.ease{
+	transition-timing-function: ease;
+}
+
+/*ease-in: 
+La transición comienza lentamente, y luego se acelera 
+progresivamente hasta el final.*/
+.ease-in{
+	transition-timing-function: ease-in;
+}
+
+/*ease-out: 
+La animación comienza abruptamente y luego se ralentiza 
+progresivamente hacia el final. */
+.ease-out{
+	transition-timing-function: ease-out;
+}
+
+/*ease-in-out: La animación comienza lentamente, 
+se acelera y luego se ralentiza hacia el final.*/
+.ease-in-out{
+	transition-timing-function: ease-in-out;
+}
+
+/*linear: 
+La transición se mueve de principio a fin a una velocidad constante.*/
+.linear{
+	transition-timing-function: linear;
+}
+
+
+
+
+/*Shorthand transition
+
+transition: 2s transform ease-in
+transition: transform 2s ease-in
+transition: ease-in transform 2s*/

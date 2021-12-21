@@ -1,0 +1,71 @@
+/****************@keyframes**************/
+
+/*Las subpropiedades de la propiedad animation son:
+
+animation-name
+Especifica el nombre de la @keyframes (regla que describe 
+los fotogramas es clave de la animación)
+
+animation-duration
+Configura el tiempo que debe tomar una animación para completar un ciclo.
+
+animation-timing-function
+Configura el tiempo de la animación; es decir, la transición de la animación
+a través de fotogramas clave mediante el establecimiento de curvas de aceleración.
+
+animation-delay
+Configura el retraso entre el momento en que se carga el elemento y el comienzo de la secuencia de animación.
+
+animation-iteration-count
+Configura el número de veces que la animación debe repetirse; puede especificar infiniterepetir la animación indefinidamente.
+
+animation-direction
+Configura si la animación debe alternar o no la dirección en cada ejecución a 
+través de la secuencia o restablecerse al punto de inicio y repetirse.
+
+animation-fill-mode
+Configura qué valores aplica la animación antes y después de ejecutarse.
+
+animation-play-state
+Le permite pausar y reanudar la secuencia de animación.
+*/
+
+
+
+
+body{
+}
+
+section{
+	height: 100vh;
+	display:flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.parque{
+	height: 100vh;
+}
+
+.auto{
+	height: 20vh;
+	
+	position:absolute;
+	left: 40vh;
+	bottom: 8vh;
+
+	animation-name: drive; 
+	animation-duration: 10s;
+	animation-iteration-count: 1;
+	}
+
+
+@keyframes drive {
+	0%{transform: translate(600px);}
+	30%{transform: translate(600px);}
+	40%{transform: translate(200px);}
+	50%{transform: translate(300px);}
+	95%{transform: translate(300px);}
+	98%{transform: translate(400px);}
+	100%{transform: translate(0px);}
+}

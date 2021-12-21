@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <link rel="stylesheet" href="styles.css">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+  </head>
+  <body>
+
+
+	<div id="appTwo" class="container">
+<!-- clases con vue 
+:class="'box-vue'"   metodo para agregar solo una clase 
+:class="['box-vue-two', 'box-vue-three']" metodo para agregar mas de una clase
+-->
+		<div class="box" :class="'box__vue-class'">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa odit asperiores quibusdam rem molestias maxime voluptas quam, ipsa, quia blanditiis assumenda quidem autem, eius ipsam qui pariatur maiores tempora aperiam.</p>
+		</div>
+
+<!-- :class="['box-vue-two', 'box-vue-three']" metodo para agregar mas de una clase
+-->
+
+		<div :class="['box-two__vue-class-one', 'box-two__vue-class-two']">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa odit asperiores quibusdam rem molestias maxime voluptas quam, ipsa, quia blanditiis assumenda quidem autem, eius ipsam qui pariatur maiores tempora aperiam.</p>
+		</div>
+
+
+<!-- para crear clases dinamicas se le debe de pasar variables desde data a modo de parametro-->
+		<div :class="['box-three__vue-class-one', 'box-three__vue-class-two', fondo]">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa odit asperiores quibusdam rem molestias maxime voluptas quam, ipsa, quia blanditiis assumenda quidem autem, eius ipsam qui pariatur maiores tempora aperiam.</p>
+		</div>
+<!-- v-model conecta el html con el JS-->		
+		<input type="text" v-model="fondo">
+
+<!-- las clases pueden recibir objetos a modo de parametro-->
+		<div :class="{'blue': color, 'pink': !color}">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa odit asperiores quibusdam rem molestias maxime voluptas quam, ipsa, quia blanditiis assumenda quidem autem, eius ipsam qui pariatur maiores tempora aperiam.</p>
+		</div>
+<!-- vue tambien permite controlar las clases desde el html-->
+		<button v-on:click='color = !color'>cambiar</button>
+		
+	</div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="app.js"></script>
+  </body>
+</html>

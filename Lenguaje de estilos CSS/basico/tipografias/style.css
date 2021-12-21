@@ -1,0 +1,53 @@
+
+/*******************tipografias******************/
+
+
+.banner{
+	background-color: black;
+}
+.banner__titulo-tipografico{
+	/*color de letras*/
+	color:white;
+	/*familia de letras a utilizarse*/
+	font-family: 'Raleway', sans-serif, cambria,cochin;/*colocar otras opciones de familia en caso de incovenientes*/
+	/*grosor de letras(100 menor-800 mayor in this case)*/
+	font-weight: 800;
+	/*tamaño de letras*/
+	font-size: 100px;
+	/*alineacion de texto
+	solo funciona en elemetos de bloque*/
+	text-align: center;/*center, right, left, justify/
+	/*control de mayusculas y minusculas*/
+	text-transform:uppercase;/*uppercase mmayusculas, lowercase minisculas, capitalize primera letra en mayuscula*/
+	/*spacio entre letras*/
+	letter-spacing: 10px; 
+	padding: 20px;
+}
+.banner__parrafo-tipografico{
+	color:white;
+	font-family: 'Raleway', sans-serif,cambria,cochin;
+	font-weight: 100;
+	font-size: 50px;
+	/*coloca sangria(funciona solo en elementos de bloque)*/
+	text-indent: 100px;
+	padding: 20px;
+}
+
+.section__parrafo-tipografico{
+	color:black;
+	font-family: 'cambria',cochin, georgia,times,times new roman;
+	font-weight: 100;
+	font-size: 50px;
+	padding: 20px;
+	font-style:italic;
+	text-transform: capitalize;
+
+
+}
+
+/*.parrafo-tipografico{
+	text-indent: 100px;solo en ellementos de bloque
+	
+}
+*/
+

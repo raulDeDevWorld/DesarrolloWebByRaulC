@@ -1,0 +1,13 @@
+.vmin{
+	/*toma un porcentaje asignado del viewport minimo,
+	 es decir puede tomar el ancho o el alto del viewvport 
+	 siempre y cuando tenga la medida minima frente a su opuesto*/
+	font-size: 10vmin;
+}
+
+.vmax{
+	/*toma un porcentaje asignado del viewport maxima,
+	 es decir puede tomar el ancho o el alto del viewvport 
+	 siempre y cuando tenga la medida maxima frente a su opuesto*/
+	font-size: 10vmax;
+}

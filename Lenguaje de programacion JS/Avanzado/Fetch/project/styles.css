@@ -1,0 +1,28 @@
+body {
+	margin: 0;
+	padding: 0;
+	background-color: lightblue;
+}
+.form {
+	text-align: center;
+	background-color: black;
+	padding: 30px;
+}
+.input {
+	background: transparent;
+	color: white;
+	border: none;
+	border-bottom: 1px solid white;
+
+}
+.button {
+	background-color: black;
+	color: white;
+	height: 30px;
+	width: 80px;
+	border-radius: 20px;
+}
+
+.div {
+	box-sizing: border-box;
+}
